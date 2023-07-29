@@ -38,6 +38,14 @@ async function run() {
         const result = await  teacherCollection.find().toArray();
         res.send(result)
      })
+    //  class 
+app.post('/class', async (req, res) => {
+  const item = req.body;
+  console.log(item)
+  const result = await cartCollection.insertOne(item);
+  console.log(result)
+})
+
     // Send a ping to confirm a successful connection
     await client.db("admin").command({ ping: 1 });
     console.log("Pinged your deployment. You successfully connected to MongoDB!");
