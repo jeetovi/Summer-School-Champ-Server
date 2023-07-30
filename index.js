@@ -4,11 +4,11 @@ const app  = express();
  const port = process.env.PORT || 5000;
  require('dotenv').config()
 
-//  Midderware
+//  Midderware   Midderware  Midderware 
 app.use(cors());
 app.use(express.json());
 
-// MONGO dB ALATS
+// MONGO dB ALATS MONGO dB ALATSMONGO dB ALATS
 
 const { MongoClient, ServerApiVersion } = require('mongodb');
 const uri =`mongodb+srv://${process.env.DB_USER}:${process.env.DB_PASS}@mongodbovi.vxsv9t2.mongodb.net/?retryWrites=true&w=majority`;
@@ -52,6 +52,7 @@ app.post('/class', async (req, res) => {
   } finally {
     // Ensures that the client will close when you finish/error
     // await client.close();
+    // await .......................
   }
 }
 run().catch(console.dir);
